@@ -1,0 +1,3 @@
+### eCommerce Solution
+
+There are 4 main components in the solution: an EC2 instace for front-end, an EC2 instance for backend, a S3 bucket for storage (uploads, documents etc) and a Database instance. Both E2 instance are configured to horizontally scale when requests reach it's threshold. They are also using load balancers to manage requests. For security, I added AWS WAF to prevent web exploits when user access the website or Third Party access for storage. There are also IAM policy for Third party or maintainer access. NSG's are also configured in every resource for another level of security . For availability, it is replicated in another region. I also include backup and restore solution.
